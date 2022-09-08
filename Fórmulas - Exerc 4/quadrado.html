@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórmula do Quadrado</title>
+</head>
+<body>
+    <script>
+        var area = 0;
+        var lado = parseInt(prompt("Informe o valor do lado do quadrado:"));
+
+        while(isNaN(lado)){
+            lado = parseInt(prompt("Informe o valor do lado do quadrado (Só números):"));
+        }
+
+        area = lado*lado
+
+        alert("A área do Quadrado é igual a " + area);
+    </script>
+</body>
+</html>

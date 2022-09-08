@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórmula do Trapésio</title>
+</head>
+<body>
+    <script>
+        var area = 0;
+        var baseMaior = parseInt(prompt("Informe o valor da base maior:"));
+        var baseMenor = parseInt(prompt("Informe o valor da base menor:"))
+        var altura = parseInt(prompt("Informe o valor da altura:"));
+
+        while(isNaN(baseMaior)){
+            baseMaior = parseInt(prompt("Informe o valor da base maior (Só números):"));
+        }
+
+        while(isNaN(baseMenor)){
+            baseMenor = parseInt(prompt("Informe o valor da base menor (Só números):"));
+        }
+
+        while(isNaN(altura)){
+            altura = parseInt(prompt("Informe o valor da altura (Só números):"));
+        }
+
+        area = (baseMaior+baseMenor)*altura/2;
+
+        alert("A área do Trapézio é igual a " + area);
+    </script>
+</body>
+</html>

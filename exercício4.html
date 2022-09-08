@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de Codar! | Exercício 4</title>
+</head>
+<body>
+    <script>
+        /* Considerando a figura acima, escreva um programa para cada forma que calcule e exiba em tela cada uma de suas respectivas áreas. O usuário
+         irá informar os valores de cada variável. Crie um arquivo para cada fórmula e poste os  arquivos no GitHub. Link do repositório abaixo.  */
+        
+        function retangulo(){
+            var area = 0;
+
+            var base = parseInt(prompt("Informe o valor da base:"));
+            var altura = parseInt(prompt("Informe o valor da altura:"));
+
+            while(isNaN(base))
+            {
+                base = parseInt(prompt("Informe o valor da base (Só números):"));
+            }
+ 
+            while(isNaN(altura)) 
+            {
+                altura = parseInt(prompt("Informe o valor da altura (Só números):"))
+            }
+            
+            area = base*altura;
+
+            alert("A área do Retângulo é igual a " + area); 
+        }
+
+        function quadrado(){
+            var area = 0;
+            var lado = parseInt(prompt("Informe o valor do lado do quadrado:"));
+
+            while(isNaN(lado)){
+                lado = parseInt(prompt("Informe o valor do lado do quadrado (Só números):"));
+            }
+
+            area = lado*lado
+
+            alert("A área do Quadrado é igual a " + area);
+        }
+
+        function losango(){
+            var area = 0;
+            var diagMaior = parseInt(prompt("Informe o valor da diagonal maior:"));
+            var diagMenor = parseInt(prompt("Informe o valor da diagonal menor:"));
+
+            while(isNaN(diagMaior)){
+                diagMaior = parseInt(prompt("Informe o valor da diagonal maior (Só números):"));
+            }
+
+            while(isNaN(diagMenor)){
+                diagMenor = parseInt(prompt("Informe o valor da diagonal menor (Só números):"));
+            }
+
+            area = diagMaior*diagMenor/2
+
+            alert("A área do Losango é igual a " + area);
+        }
+
+        function trapezio(){
+            var area = 0;
+            var baseMaior = parseInt(prompt("Informe o valor da base maior:"));
+            var baseMenor = parseInt(prompt("Informe o valor da base menor:"))
+            var altura = parseInt(prompt("Informe o valor da altura:"));
+
+            while(isNaN(baseMaior)){
+                baseMaior = parseInt(prompt("Informe o valor da base maior (Só números):"));
+            }
+
+            while(isNaN(baseMenor)){
+                baseMenor = parseInt(prompt("Informe o valor da base menor (Só números):"));
+            }
+
+            while(isNaN(altura)){
+                altura = parseInt(prompt("Informe o valor da altura (Só números):"));
+            }
+
+            area = (baseMaior+baseMenor)*altura/2;
+
+            alert("A área do Trapézio é igual a " + area);
+        }
+
+        function paralelogramo(){
+            var area = 0;
+            var base = parseInt(prompt("Informe o valor da base:"));
+            var altura = parseInt(prompt("Informe o valor da altura:"));
+
+            while(isNaN(base)){
+                base = parseInt(prompt("Informe o valor da base (Só números):"));
+            }
+
+            while(isNaN(altura)){
+                altura = parseInt(prompt("Informe o valor da altura (Só números):"));
+            }
+
+            area = base*altura;
+
+            alert("A área do Paralelogramo é igual a " + area);
+        }
+
+        function triangulo(){
+            var area = 0;
+            var base = parseInt(prompt("Informe o valor da base:"));
+            var altura = parseInt(prompt("Informe o valor da altura:"));
+
+            while(isNaN(base)){
+                base = parseInt(prompt("Informe o valor da base (Só números):"));
+            }
+
+            while(isNaN(altura)){
+                altura = parseInt(prompt("Informe o valor da altura (Só números):"));
+            }
+
+            area = base*altura/2;
+
+            alert("A área do Triângulo é igual a " + area);
+        }
+
+        function circulo(){
+            var area = 0;
+            var raio = parseInt(prompt("Informe o valor do raio:"));
+
+            while(isNaN(raio)){
+                raio = parseInt(prompt("Informe o valor do raio (Só números):"));
+            }
+
+            area = Math.PI*raio**2;
+
+            alert("A área do Círculo é igual a " + area);
+        }
+
+
+        var escolha = parseInt(prompt("Escolha uma opção de Cálculo de área: 1.Retângulo 2.Quadrado 3.Losango 4.Trapézio 5.Paralelogramo 6.Triângulo 7.Círculo"));
+
+        while(isNaN(escolha) || escolha > 7 || escolha < 1)
+        {
+            escolha = parseInt(prompt("Escolha uma opção de Cálculo de área: 1.Retângulo 2.Quadrado 3.Losango 4.Trapézio 5.Paralelogramo 6.Triângulo 7.Círculo"));
+        }
+
+        switch (escolha) {
+            case 1:
+                retangulo();
+                break;
+            
+            case 2:
+                quadrado();
+                break;
+
+            case 3:
+                losango();
+                break;
+
+            case 4:
+                trapezio();
+                break;
+
+            case 5:
+                paralelogramo();
+                break;
+            
+            case 6:
+                triangulo();
+                break;
+
+            case 7:
+                circulo();
+                break;
+
+            default:
+                break;
+        }
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórmula do Triângulo</title>
+</head>
+<body>
+    <script>
+        var area = 0;
+        var base = parseInt(prompt("Informe o valor da base:"));
+        var altura = parseInt(prompt("Informe o valor da altura:"));
+
+        while(isNaN(base)){
+            base = parseInt(prompt("Informe o valor da base (Só números):"));
+        }
+
+        while(isNaN(altura)){
+            altura = parseInt(prompt("Informe o valor da altura (Só números):"));
+        }
+
+        area = base*altura/2;
+
+        alert("A área do Triângulo é igual a " + area);
+    </script>
+</body>
+</html>
